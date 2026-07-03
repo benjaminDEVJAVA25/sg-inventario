@@ -13,6 +13,10 @@ public class Producto {
         this.id = id;
     }
 
+    public Producto() {
+    }
+    
+
     public String getNombre() {
         return nombre;
     }

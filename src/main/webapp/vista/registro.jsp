@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 2/07/2026, 4:33:27 p. m.
-    Author     : siemp
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +6,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
     </body>
 </html>

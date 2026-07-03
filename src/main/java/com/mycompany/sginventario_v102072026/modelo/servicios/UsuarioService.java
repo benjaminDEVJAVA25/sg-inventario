@@ -7,5 +7,5 @@ public class UsuarioService {
     
     private HashMap<String, Usuario> usuarios;
     
-    public void autenticar(){};
+    //public Usuario autenticar(String username, String password){};
 }
