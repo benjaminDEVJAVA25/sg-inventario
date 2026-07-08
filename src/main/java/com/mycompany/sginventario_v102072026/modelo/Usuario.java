@@ -2,11 +2,11 @@ package com.mycompany.sginventario_v102072026.modelo;
 
 public class Usuario {
 
-    private String userName, password;
+    private String username, password;
     private Rol rol;
 
     public Usuario(String userName, String password, Rol rol) {
-        this.userName = userName;
+        this.username = userName;
         this.password = password;
         this.rol = rol;
     }
@@ -14,12 +14,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     public String getPassword() {
@@ -40,7 +40,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "[" + userName + ", " + password + ", " + rol + "]";
+        return "[" + username + ", " + password + ", " + rol + "]";
     }
 
 }
