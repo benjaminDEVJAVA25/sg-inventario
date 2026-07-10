@@ -12,7 +12,7 @@
     <div class="login-box">
         <h2>Iniciar Sesión</h2>
         
-        <form action="../Login.do" method="POST">
+        <form action="${pageContext.request.contextPath}/Login.do" method="POST">
             <div class="input-group">
                 <label for="username">Usuario</label>
                 <input type="text" id="username" name="username">

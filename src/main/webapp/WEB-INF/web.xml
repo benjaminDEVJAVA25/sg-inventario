@@ -14,4 +14,12 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/Login.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>com.mycompany.sginventario_v102072026.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/Logout.do</url-pattern>
+    </servlet-mapping>
 </web-app>

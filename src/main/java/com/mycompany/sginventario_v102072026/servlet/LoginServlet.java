@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LoginServlet extends HttpServlet{
     
@@ -20,9 +21,11 @@ public class LoginServlet extends HttpServlet{
         String contrasena = request.getParameter("password");
         
         Usuario usuarioVerificado = usuarioService.autenticar(nombre, contrasena);
-        
         if(usuarioVerificado != null){
-            request.getSession().setAttribute("usuario", usuarioVerificado);
+            HttpSession session = request.getSession();
+            session.setAttribute("usuario", usuarioVerificado);
+            response.sendRedirect(request.getContextPath() + "/vista/menu.jsp");
+            
         } else {
             request.setAttribute("error", "No se puedo hacer el logueo");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/login.jsp");

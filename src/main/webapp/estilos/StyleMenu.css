@@ -1,0 +1,147 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    min-height: 100vh;
+}
+
+/* Encabezado Principal */
+.main-header {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #a389f4;
+}
+
+/* Barra de Navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #c3c3c3;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Formulario y Botón de Cerrar Sesión */
+.logout-form {
+    display: inline-block;
+}
+
+.btn-logout {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e03e3e;
+}
+
+/* Contenedor del Contenido Central */
+.content-container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta de Bienvenida */
+.welcome-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border-left: 5px solid #a389f4;
+}
+
+.welcome-card h2 {
+    color: #1e1e2f;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.user-info {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.user-info strong {
+    color: #1e1e2f;
+}
+
+/* Etiqueta (Badge) para el Rol */
+.badge-role {
+    display: inline-block;
+    background-color: #e8e4f9;
+    color: #764ba2;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
