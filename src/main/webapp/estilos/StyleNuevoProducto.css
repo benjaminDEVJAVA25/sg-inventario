@@ -1,0 +1,122 @@
+/* Reset y Header (Consérvalos si los tienes unificados en un solo archivo) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+.main-header {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a389f4;
+}
+
+/* Botón de volver en el navbar */
+.btn-back {
+    color: #c3c3c3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #ffffff;
+}
+
+/* Contenedor del Formulario */
+.content-container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta del Formulario */
+.form-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    border-top: 5px solid #764ba2; /* Detalle visual superior */
+}
+
+.form-card h2 {
+    color: #1e1e2f;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Bloques de entrada (Inputs) */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+/* Efecto Focus en Inputs */
+.input-group input:focus {
+    border-color: #764ba2;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.15);
+}
+
+/* Botón Guardar */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #764ba2;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #5a3681;
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Pequeño efecto de hundimiento al hacer clic */
+}
+

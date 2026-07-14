@@ -17,7 +17,7 @@
             <h1 class="logo">Gestión a la mano</h1>
             <nav class="navbar">
                 <div class="nav-links">
-                    <a href="#">Productos</a>
+                    <a href="${pageContext.request.contextPath}/Product.do">Productos</a>
                     <a href="#">Ventas</a>
                     <a href="#">Usuarios</a>
                 </div>

@@ -22,4 +22,12 @@
         <servlet-name>logout</servlet-name>
         <url-pattern>/Logout.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>product</servlet-name>
+        <servlet-class>com.mycompany.sginventario_v102072026.servlet.ProductoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>product</servlet-name>
+        <url-pattern>/Product.do</url-pattern>
+    </servlet-mapping>
 </web-app>
