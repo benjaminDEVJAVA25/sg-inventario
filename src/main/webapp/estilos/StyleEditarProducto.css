@@ -1,0 +1,140 @@
+/* Reset de estilos para limpiar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+.main-header {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a389f4;
+}
+
+/* Contenedor central */
+.content-container {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ocupa todo el espacio restante empujando el header arriba */
+}
+
+/* Tarjeta del Formulario */
+.form-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    border-top: 5px solid #764ba2; /* Detalle superior morado */
+}
+
+.form-card h2 {
+    color: #1e1e2f;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Grupos de Inputs (Organización vertical de etiquetas y campos) */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+/* Efecto focus cuando el usuario hace clic en el input */
+.input-group input:focus {
+    border-color: #764ba2;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.15);
+}
+
+/* Fila de botones alineados horizontalmente */
+.button-group-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Botón Guardar Cambios */
+.btn-submit {
+    flex: 1; /* Hace que mida exactamente el 50% del contenedor */
+    padding: 12px;
+    background-color: #764ba2;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #5a3681;
+}
+
+/* Botón Cancelar */
+.btn-cancel {
+    flex: 1; /* Hace que mida exactamente el 50% del contenedor */
+    display: inline-block;
+    padding: 12px;
+    background-color: #e0e0e0;
+    color: #4f4f4f;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #d5d5d5;
+}
+
+.btn-cancel:hover {
+    background-color: #d5d5d5;
+    color: #333333;
+}
+

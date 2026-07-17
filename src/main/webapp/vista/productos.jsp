@@ -4,10 +4,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Productos</title>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/estilos/StyleProductos.css"/>
     </head>
     <body>
+        <% if (session.getAttribute("usuario") == null) {
+                response.sendRedirect(request.getContextPath() + "/vista/login.jsp");
+                return;
+            }
+        %>
         <header class="main-header">
             <h1 class="logo">Gestión a la Mano</h1>
             <nav class="navbar">
@@ -25,6 +30,7 @@
                                 <th>Nombre del Producto</th>
                                 <th>Precio</th>
                                 <th>Stock / Disponibilidad</th>
+                                <th class="text-center">Acciones</th>
                             </tr>
                             <tbody>
                                 <c:forEach items="${ListaProductos}" var="producto">
@@ -36,6 +42,12 @@
                                             <span class="badge-stock ${producto.stock <= 5 ? 'stock-low' : 'stock-ok'}">
                                                 ${producto.stock} unidades
                                             </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <!-- Botón de Editar Estilizado -->
+                                            <a href="${pageContext.request.contextPath}/Product.do?accion=editar&id=${producto.id}" class="btn-edit-action">
+                                                Editar
+                                            </a>
                                         </td>
                                     </tr>
                                 </c:forEach>

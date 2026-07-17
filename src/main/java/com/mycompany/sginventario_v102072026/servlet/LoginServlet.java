@@ -20,6 +20,7 @@ public class LoginServlet extends HttpServlet{
         String nombre = request.getParameter("username");
         String contrasena = request.getParameter("password");
         
+        
         Usuario usuarioVerificado = usuarioService.autenticar(nombre, contrasena);
         if(usuarioVerificado != null){
             HttpSession session = request.getSession();

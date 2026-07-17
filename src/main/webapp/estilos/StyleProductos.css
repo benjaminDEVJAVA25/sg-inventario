@@ -144,3 +144,30 @@ body {
     color: #888888;
     font-style: italic;
 }
+
+/* Centrar contenido de columnas específicas */
+.text-center {
+    text-align: center;
+}
+
+/* Botón Editar dentro de la tabla */
+.btn-edit-action {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #e3f2fd; /* Fondo azul muy claro */
+    color: #0d47a1; /* Texto azul oscuro */
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid #bbdefb;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover al pasar el cursor */
+.btn-edit-action:hover {
+    background-color: #0d47a1;
+    color: #ffffff;
+    border-color: #0d47a1;
+    box-shadow: 0 2px 6px rgba(13, 71, 161, 0.2);
+}

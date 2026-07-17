@@ -19,8 +19,14 @@ public class ProductoService {
         generarCodigo(producto);
         productos.put(producto.getId(), producto);
     };
-    public void buscar(){};
-    public void actualizar(){};
+    public Producto buscar(int id){
+        return productos.get(id);
+    };
+    public void actualizar(Producto producto, String nombre, Double precio, int stock){
+        producto.setNombre(nombre);
+        producto.setPrecio(precio);
+        producto.setStock(stock);
+    };
     public void eliminar(){};
     
     public List<Producto> listar(){

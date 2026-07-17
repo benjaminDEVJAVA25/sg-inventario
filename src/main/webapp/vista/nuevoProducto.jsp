@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/estilos/StyleNuevoProducto.css"/>
     </head>
     <body>
+        <% if (session.getAttribute("usuario") == null) {
+                response.sendRedirect(request.getContextPath() + "/vista/login.jsp");
+                return;
+            }
+        %>
         <header class="main-header">
             <h1 class="logo">Gestión a la Mano</h1>
             <nav class="navbar">
