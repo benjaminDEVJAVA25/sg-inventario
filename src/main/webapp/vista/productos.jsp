@@ -13,11 +13,13 @@
                 return;
             }
         %>
+
         <header class="main-header">
             <h1 class="logo">Gestión a la Mano</h1>
             <nav class="navbar">
                 <!-- Enlace estilizado como botón para añadir productos -->
                 <a href="${pageContext.request.contextPath}/vista/nuevoProducto.jsp" class="btn-create">+ Nuevo Producto</a>
+
             </nav>
         </header>
         <main class="content-container">
@@ -48,6 +50,10 @@
                                             <a href="${pageContext.request.contextPath}/Product.do?accion=editar&id=${producto.id}" class="btn-edit-action">
                                                 Editar
                                             </a>
+                                            <a href="${pageContext.request.contextPath}/Product.do?accion=eliminar&id=${producto.id}" class="btn-edit-action"
+                                               onclick="return confirm(`Estas seguro q deseas eliminar este producto ${producto.nombre}?`)">
+                                                ELiminar
+                                            </a>
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -58,5 +64,24 @@
                 </c:if>
             </div>
         </main>
+        <c:if test="${not empty sms}">
+            <div id="mensaje" class="mensaje-exito">
+                ${sms}
+            </div> 
+        </c:if>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const mensaje = document.getElementById("mensaje");
+                if (mensaje) {
+                    setTimeout(() => {
+                        mensaje.style.opacity = "0";
+                        setTimeout(() => {
+                            mensaje.remove();
+                        }, 600);
+                    }, 3000);
+                }
+            });
+
+        </script>
     </body>
 </html>

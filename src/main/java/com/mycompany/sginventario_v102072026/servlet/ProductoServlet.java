@@ -26,6 +26,8 @@ public class ProductoServlet extends HttpServlet {
             case "listar":
                 List<Producto> listaProductos = productos.listar();
                 request.setAttribute("ListaProductos", listaProductos);
+                request.setAttribute("sms", request.getSession().getAttribute("mensaje"));
+                request.getSession().removeAttribute("mensaje");
                 request.getRequestDispatcher("/vista/productos.jsp")
                         .forward(request, response);
                 break;
@@ -48,7 +50,11 @@ public class ProductoServlet extends HttpServlet {
                 productos.actualizar(producto, nombre, Double.parseDouble(precio), Integer.parseInt(stock));
                 response.sendRedirect(request.getContextPath() + "/Product.do?accion=listar");
                 break;
-
+            case "eliminar":
+                id = request.getParameter("id");
+                productos.eliminar(Integer.parseInt(id));
+                response.sendRedirect(request.getContextPath() + "/Product.do?accion=listar");
+                break;
         }
 
     }
@@ -62,8 +68,15 @@ public class ProductoServlet extends HttpServlet {
         stock = request.getParameter("stock");
 
         Producto producto = new Producto(nombre, Double.parseDouble(precio), Integer.parseInt(stock));
-        productos.agregar(producto);
-
+        boolean agregado = productos.agregar(producto);
+        
+        if(agregado){
+            request.getSession().setAttribute("mensaje", "Producto "+ producto.getNombre() +" agregado correctamente");
+        } else {
+            request.getSession().setAttribute("mensaje", "Producto "+ producto.getNombre() +" ya existe, imposible agregar");
+        }
+        
+        
         response.sendRedirect(request.getContextPath() + "/Product.do?accion=listar");
     }
 
